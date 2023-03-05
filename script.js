@@ -9,12 +9,15 @@ const conocimientos = document.getElementById('conocimientos')
 const btnRecargar = document.getElementById('btnRecargar')
 
 
+// Tocar el boton "Proyectos" para desplegar los proyectos realizados (Momentaneamente hay solo 1) 
+//cambiando la clase del css.
 btnProyectos.addEventListener('click', (e)=>{
    proyectos.classList.add('open')
    containerProyectos.classList.add('open')
    containerProyectos.style.transform = 'translateY(0%)'
 })
 
+// Tocar el boton cerrar para quitar la clase de css y dar la ilusion de "cerrar"
 cerrar.addEventListener('click', ()=>{
     console.log(2)
     containerProyectos.style.transform = 'translateY(-100%)'
@@ -24,7 +27,7 @@ cerrar.addEventListener('click', ()=>{
     }, 600);
 })
 
-
+//Boton para agregar un form mediante el inner.html 
 btnContacto.addEventListener('click', ()=>{
     educacion.innerHTML = `  
     `
@@ -49,6 +52,7 @@ btnContacto.addEventListener('click', ()=>{
     btnRecargar.classList.add('btnProyectos')
 })
 
+//Permite tocar el boton volver y recargar la pagina para sacar el formulario.
 btnRecargar.addEventListener('click', ()=>{
     location.reload()
 })
